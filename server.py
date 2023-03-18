@@ -9,6 +9,8 @@ def hello_world(request):
     current_time = datetime.datetime.now()
     if name == None or len(name) == 0:
         name = "world"
+    if name == "Gareth":
+        name = "King " + name
     message = "Good afternoon, " + name + "!\n"
     return Response(message)
 
