@@ -1,15 +1,20 @@
 from wsgiref.simple_server import make_server
 from pyramid.config import Configurator
 from pyramid.response import Response
+import datetime
 import os
 
 def hello_world(request):
     name = os.environ.get('NAME')
+    current_time = datetime.datetime.now()
     if name == None or len(name) == 0:
         name = "world"
-    if name == "Gareth"
-        name = "King " + name
-    message = "Hello, " + name + "!\n"
+    if current_time < "12:00"
+        message = "Good morning, " + name + "!\n"
+    elif current_time < "18:00"
+        message = "Good afternoon, " + name + "!\n"
+    else
+        message = "Good evening, " + name + "!\n"
     return Response(message)
 
 if __name__ == '__main__':
