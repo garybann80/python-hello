@@ -11,9 +11,9 @@ def hello_world(request):
         name = "world"
     if name == "Gareth":
         name = "King " + name
-    if current_time < "12:00":
+    if current_time.hour < 12:
         message = "Good morning, "
-    elif current_time < "18:00":
+    elif current_time.hour < 14:
         message = "Good afternoon, "
     else:
         message = "Good evening, "
