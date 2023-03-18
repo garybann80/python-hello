@@ -9,12 +9,7 @@ def hello_world(request):
     current_time = datetime.datetime.now()
     if name == None or len(name) == 0:
         name = "world"
-    if current_time < "12:00"
-        message = "Good morning, " + name + "!\n"
-    elif current_time < "18:00"
-        message = "Good afternoon, " + name + "!\n"
-    else
-        message = "Good evening, " + name + "!\n"
+    message = "Good afternoon, " + name + "!\n"
     return Response(message)
 
 if __name__ == '__main__':
